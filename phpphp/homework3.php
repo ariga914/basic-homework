@@ -1,5 +1,5 @@
 <?php
-//homework3
+// homework3
 function checkPrimeNumber ($n) {
   if ($n === 0 || $n === 1)  {
     return false;
@@ -9,11 +9,11 @@ function checkPrimeNumber ($n) {
   } 
   $m = $n/2;
   for($i = 2; $i <= $m; ++$i) {
-      if ($n%$i == 0) {
-        return false;
-        break;  
-      }
+    if ($n%$i === 0) {
+      return false;  
+    }
   }
   return true;
 }
+
 ?>

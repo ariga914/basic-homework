@@ -1,5 +1,5 @@
 <?php 
-//homework2
+// homework2
 function factorialOfNumber($n) {
     $i = 1;
     $product = 1;
