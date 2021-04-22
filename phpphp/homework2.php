@@ -1,6 +1,6 @@
 <?php 
 //homework2
-function factorialOfNumber ($n){
+function factorialOfNumber($n) {
     $i = 1;
     $product = 1;
     while ($i < $n) {
@@ -10,6 +10,6 @@ function factorialOfNumber ($n){
     return $product;
 }
 
-echo factorialOfNumber (10);
+echo factorialOfNumber(10);
 
 ?>
