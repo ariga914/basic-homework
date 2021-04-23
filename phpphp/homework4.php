@@ -11,4 +11,5 @@ function checkPrimeNumber2 ($n) {
     }  
 }
 
+checkPrimeNumber2 (100);
 ?>

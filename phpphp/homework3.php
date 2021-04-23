@@ -16,4 +16,8 @@ function checkPrimeNumber ($n) {
     return true;
 }
 
+echo checkPrimeNumber(1)."<br>";
+echo checkPrimeNumber(2)."<br>";
+echo checkPrimeNumber(4)."<br>";
+echo checkPrimeNumber(7)."<br>";
 ?>
