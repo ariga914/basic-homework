@@ -1,2 +1,2 @@
 # basic-homework
-# Nobuyuki Ariga
+ Nobuyuki Ariga OOP
