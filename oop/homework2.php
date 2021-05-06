@@ -62,4 +62,11 @@ class MailChimp extends Emailer
         }
     }
 }
+//test for sendGrid
+$sgEmailer = new SendGrid("youremail@yourdomain.com");
+$sgEmailer->addRecipients("emailID@domain.com")->setSubject("Just a Test")->setBody("Hi Name, How are you?")->sendEmail();
+//test for MailChimp
+$mcEmailer = new MailChimp("youremail@yourdomain.com");
+$mcEmailer->addRecipients("emailID@domain.com")->setSubject("Just a Test")->setBody("Hi Name, How are you?")->sendEmail();
+
 ?>
