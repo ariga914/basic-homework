@@ -1,2 +1,3 @@
-# basic-homework
+# Array-homework
 # Nobuyuki Ariga
+
