@@ -7,41 +7,32 @@ $multiArray =array(
 
 $sum = 0;
 $avg = 0;
-$min = 100;
-$max = 0;
+$min = $multiArray[0][0];
+$max = $multiArray[0][0];
 
-for ($i=0; $i<sizeof($multiArray); ++$i) {
-    $subSum = 0;
-    $subMin = 100;
-    $subMax = 0;
+foreach ($multiArray as $array) {
+    foreach ($array as $ele) {
+        $sum += $ele;
 
-    for ($j=0; $j<sizeof($multiArray[$i]); ++$j) {
-        $subSum += $multiArray[$i][$j];
-
-        if ($multiArray[$i][$j] < $subMin){
-            $subMin = $multiArray[$i][$j];
+        if ($min > $ele){
+            $min = $ele;
         }
 
-        if ($multiArray[$i][$j] > $subMax){
-            $subMax = $multiArray[$i][$j];
+        if ($max < $ele){
+            $max = $ele;
         }
     } 
-
-    $sum += $subSum;
-
-    if ($subMin < $min) {
-        $min = $subMin;
-    }
-
-    if ($subMax > $max) {
-        $max = $subMax;
-    }
 }
 
 
 
 echo $sum."<br>";
 
+/*if I use count($multiArray) instead of  
+(sizeof($multiArray) * sizeof($multiArray[0])) as below,
+count($multiArray) returns the number of key, 
+not working like the one in the hint
+*/
 $avg = $sum / (sizeof($multiArray) * sizeof($multiArray[0]));
 echo round($avg)."<br>";
 
