@@ -5,6 +5,10 @@ class LinkedList3 extends LinkedList
 {
     //made function without following hints at first
     public function reverse() {
+        if ($this->head == null) {
+            echo "List is empty";
+        }
+
         $currNode = $this->head; 
         $arr = [];  
         while ($currNode != null) {
@@ -12,8 +16,8 @@ class LinkedList3 extends LinkedList
             $currNode = $currNode->getNext();
         }
         $arr2 = [];
-        for ($i=0; $i<sizeof($arr); $i++) {
-            $t =100; 
+        for ($i=sizeof($arr2)-1; $i>=0; $i--) {
+            $t =$arr[$i]; 
             $t = $arr[(sizeof($arr)-1-$i)];
             array_push($arr2, $t);
             print $arr2[$i]." ";

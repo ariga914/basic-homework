@@ -24,16 +24,17 @@ class LinkedList2 extends LinkedList
         }
         if ($this->head->getData() == $data){
             $this->head = $this->head->getNext();
-        } else {
-            $current = $this->head;
-                while ($current->getNext() != null) {
-                    if ($current->getNext()->getData() == $data) {
-                        $current->setNext($current->getNext()->getNext());
-                    }
-                    $current = $current->getNext();                    
-                }    
+        } 
+
+        $current = $this->head;
+        while ($current->getNext() != null) {
+            if ($current->getNext()->getData() == $data) {
+                $current->setNext($current->getNext()->getNext());
+            }
+            $current = $current->getNext();                    
+        }    
                                                                                             
-        }
+        
     }
 }
 
@@ -46,5 +47,16 @@ $list2->insert(5);
 $list2->insert(2);
 $list2->insert(3);
 $list2->deleteAll(2);
-$list2->visit()
+$list2->visit();
+
+$list2 = new LinkedList2(); 
+$list2->insert(2); 
+$list2->insert(4); 
+$list2->insert(1); 
+$list2->insert(2);
+$list2->insert(5);
+$list2->insert(2);
+$list2->insert(3);
+$list2->deleteAll(2);
+$list2->visit();
 ?>
