@@ -15,6 +15,7 @@ class LinkedList3 extends LinkedList
             array_push($arr, $currNode->getData());
             $currNode = $currNode->getNext();
         }
+        
         $arr2 = [];
         for ($i=sizeof($arr2)-1; $i>=0; $i--) {
             $t =$arr[$i]; 

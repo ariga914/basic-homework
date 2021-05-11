@@ -25,7 +25,6 @@ class LinkedList2 extends LinkedList
         if ($this->head->getData() == $data){
             $this->head = $this->head->getNext();
         } 
-
         $current = $this->head;
         while ($current->getNext() != null) {
             if ($current->getNext()->getData() == $data) {
