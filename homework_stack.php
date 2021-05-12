@@ -16,7 +16,7 @@ class Stack {
     public function pop()
     {
         if (!$this->isEmpty()) { 
-            array_pop($this->elements[sizeof($this->elements) - 1]); // unset use to destroy a variable (https://www.php.net/manual/en/function.unset)
+            array_pop($this->elements); 
         }
     }
 
