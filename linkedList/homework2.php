@@ -15,14 +15,15 @@ class LinkedList3 extends LinkedList
             array_push($arr, $currNode->getData());
             $currNode = $currNode->getNext();
         }
-        
+
         $arr2 = [];
-        for ($i=sizeof($arr2)-1; $i>=0; $i--) {
+        for ($i=sizeof($arr)-1; $i>=0; $i--) {
             $t =$arr[$i]; 
-            $t = $arr[(sizeof($arr)-1-$i)];
+            
             array_push($arr2, $t);
-            print $arr2[$i]." ";
-        }         
+            
+        }   
+        print_r($arr2);      
     }
 
     //made function, following hints 
@@ -49,8 +50,5 @@ $list->insert(3);
 $list->insert(4);
 $list->insert(5);
 
-$list->reverse2();
-
-$list->visit();
-
+$list->reverse();
 ?>
