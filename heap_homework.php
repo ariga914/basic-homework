@@ -1,7 +1,7 @@
 <?php
 function MaxHeapify(&$data, $heapSize, $index) {
-    $left = ($index + 1) * 2 - 1;
-    $right = ($index + 1) * 2;
+    $left = ($index + 1) * 2 + 1;
+    $right = ($index + 1) * 2 + 2;
     $largest = 0;
  
     if ($left < $heapSize && $data[$left] > $data[$index])
@@ -24,7 +24,7 @@ function MaxHeapify(&$data, $heapSize, $index) {
  function HeapOut(&$data, $count, $k) {
     $heapSize = $count;
     $printer = [];
-    for ($p = ($heapSize - 1) / 2; $p >= 0; $p--) 
+    for ($p = $heapSize / 2 - 1; $p >= 0; $p--) 
         MaxHeapify($data, $heapSize, $p);
  
     for ($i = $count - 1; $i > $count-1-$k; $i--)
