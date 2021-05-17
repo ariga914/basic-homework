@@ -1,5 +1,5 @@
 <?php
-require_once ('homework1.php');
+require_once ('tree_class.php');
 
 class Queue
 {
@@ -16,7 +16,7 @@ class Queue
 
     public function dequeue() {
         if (!$this->isEmpty()) {
-            unset($this->elements[sizeof($this->elements) - 1]);
+            array_pop($this->elements);
         }
     }
 
@@ -36,33 +36,24 @@ function inserting (object $bt, object $insert) {
     $queue1 = new Queue;
     if ($bt->getRoot() != null) {
         $queue1->enqueue($bt->getRoot());
+        while (!$queue1->isEmpty()) {
+            $currNode = $queue1->front();
+            
+            if($currNode->getLeft() === null) {
+                $currNode->setLeft($insert);
+            } else {
+                $queue1->enqueue($currNode->getLeft());
+            }
+
+            if($currNode->getRight() === null) {
+                $currNode->setRight();
+            } else {
+                $queue1->enqueue($currNode->getRight());
+            }
+            $queue1->dequeue();
+        }
     } else {
         $bt->setRoot($insert);
-    }
-    if($bt->getRoot()->getLeft() != null) {
-        $queue1->enqueue($bt->getRoot()->getLeft());
-    } else {
-        $bt->getRoot()->setLeft($insert);
-    }
-    if($bt->getRoot()->getRight() != null) {
-        $queue1->enqueue($bt->getRoot()->getRight());
-    } else {
-        $bt->getRoot()->setRight($insert);
-    }
-
-    $queue1->dequeue();
-    while ($queue1->front()->getLeft() != null || $queue1->front()->getRight() != null) {
-        if($queue1->front()->getLeft() != null) {
-            $queue1->enqueue($queue1->front()->getLeft());
-        } else {
-            $queue1->front()->setLeft($insert);
-        }
-        if($queue1->front()->getRight() != null) {
-            $queue1->enqueue($queue1->front()->getRight());
-        } else {
-            $queue1->front()->setRight($insert);
-        }
-        $queue1->dequeue();
     }
 }
 
@@ -75,7 +66,7 @@ $parent2 = new Node(9, $left2, $left3);
 
 $root = new Node(10, $parent1, $parent2);
 
-$bts = new BT($root);
+$bts = new BinaryTree($bts);
 
 $insertion1 = new Node(12);
 
