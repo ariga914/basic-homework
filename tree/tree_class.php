@@ -120,44 +120,44 @@ class BinaryTree {
     
 }
 
-class SearchBinaryTree extends BinaryTree {
-	public function insert($data) {
+class SearchBinaryTree extends BinaryTree 
+{
+    public function insert($data) {
               
-		if($this->root == NULL) {
+        if($this->root == NULL) {
 
-		$this->root = new Node($data);
+            $this->root = new Node($data);
 
-		} else {
+        } else {
 
-			$current = $this->root;
+            $current = $this->root;
 
-			while(true) {
+            while(true) {
 
-				if($data < $current->getData()) {
+                if($data < $current->getData()) {
 					
-					if($current->getLeft()) {
-						$current = $current->getLeft();
-					} else {
-						$current->setLeft(new Node($data));
-						break; 
-					}
+                    if($current->getLeft()) {
+                        $current = $current->getLeft();
+                    } else {
+                        $current->setLeft(new Node($data));
+                        break; 
+                    }
 
-				} else if($data > $current->getData()){
+                } else if($data > $current->getData()){
 
-					if($current->getRight()) {
-						$current = $current->getRight();
-					} else {
-						$current->setRight(new Node($data));
-						break; 
-					}
+                    if($current->getRight()) {
+                        $current = $current->getRight();
+                    } else {
+                        $current->setRight(new Node($data));
+                        break; 
+                    }
 
-				} else {
-					break;
-				}
-			} 
-		}
-	}
+                } else {
+                    break;
+                }
+            } 
+        }
+    }
 }
-
 
 ?>
