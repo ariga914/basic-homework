@@ -1,7 +1,7 @@
 <?php
 function MaxHeapify(&$data, $heapSize, $index) {
-    $left = ($index + 1) * 2 + 1;
-    $right = ($index + 1) * 2 + 2;
+    $left = ($index) * 2 + 1;
+    $right = ($index) * 2 + 2;
     $largest = 0;
  
     if ($left < $heapSize && $data[$left] > $data[$index])
