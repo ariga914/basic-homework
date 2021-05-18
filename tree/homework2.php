@@ -46,7 +46,7 @@ function inserting (object $bt, object $insert) {
             }
 
             if($currNode->getRight() === null) {
-                $currNode->setRight();
+                $currNode->setRight($insert);
             } else {
                 $queue1->enqueue($currNode->getRight());
             }
@@ -66,7 +66,7 @@ $parent2 = new Node(9, $left2, $left3);
 
 $root = new Node(10, $parent1, $parent2);
 
-$bts = new BinaryTree($bts);
+$bts = new BinaryTree($root);
 
 $insertion1 = new Node(12);
 
