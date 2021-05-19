@@ -34,6 +34,6 @@ function searchMax (object $bt) {
     return $maxv->getdata();
 }
 
-echo searchMin($tree);
+echo searchMin($tree)."\n";
 echo searchMax($tree);
 ?>
