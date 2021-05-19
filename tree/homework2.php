@@ -16,13 +16,7 @@ class Queue
 
     public function dequeue() {
         if (!$this->isEmpty()) {
-            array_pop($this->elements);
-        }
-    }
-
-    public function front() {
-        if (!$this->isEmpty()) {
-            return $this->elements[sizeof($this->elements) - 1];
+            return array_pop($this->elements);
         }
         return null;
     }
@@ -37,20 +31,21 @@ function inserting (object $bt, object $insert) {
     if ($bt->getRoot() != null) {
         $queue1->enqueue($bt->getRoot());
         while (!$queue1->isEmpty()) {
-            $currNode = $queue1->front();
+            $currNode = $queue1->dequeue();
             
             if($currNode->getLeft() === null) {
                 $currNode->setLeft($insert);
+                break;
             } else {
                 $queue1->enqueue($currNode->getLeft());
             }
 
             if($currNode->getRight() === null) {
                 $currNode->setRight($insert);
+                break;
             } else {
                 $queue1->enqueue($currNode->getRight());
             }
-            $queue1->dequeue();
         }
     } else {
         $bt->setRoot($insert);
