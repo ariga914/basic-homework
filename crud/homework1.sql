@@ -1,6 +1,5 @@
 CREATE TABLE new_agents AS
 	SELECT *
-    PRIMARY KEY(AGENT_CODE)
     FROM agents
     WHERE agents.WORKING_AREA = 'London'
     AND AGENT_CODE IN  
@@ -9,3 +8,6 @@ CREATE TABLE new_agents AS
         FROM customer
         WHERE customer.CUST_COUNTRY = 'UK'
      );
+
+ALETER TABLE new_agents
+ADD PRIMARY KEY (AGENT_CODE)
