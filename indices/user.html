@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>User list</title>
+    <link rel="stylesheet" , href="index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <header onclick="hideLoginForm()">
+        <div id="logo">The logo</div>
+        <div id="slogan" class="slogan">The header slogan</div>
+        <div id="search">
+            <form method="GET">
+                <input type="text" name="keyword" />
+                <i class="material-icons">search</i>
+            </form>
+        </div>
+    </header>
+    <ul class="login-bar">
+        <li class="user"><a href="./user_list.html"><span>Hi</span> User</a></li>
+        <li class="login" onclick="showLoginForm()">login</li>
+    </ul>
+    <div id="login-form">
+        <form>
+            <input class="user-name" placeholder="User Name">
+            <input type="password" class="password" placeholder="Password">
+            <input type="checkbox" class="checkbox">
+            <label>Remember user name</label>
+            <input type="submit" value="Log in" class="login-btn">
+        </form>
+    </div>
+    <nav onclick="hideLoginForm()">
+        <ul>
+            <li>Menu 1</li>
+            <li>Menu 2</li>
+            <li>Menu 3</li>
+            <li>Menu 4</li>
+        </ul>
+    </nav>
+
+    <div id="main" onclick="hideLoginForm()">
+        <div id="main-content">
+            <table>
+                <caption>Users</caption>
+                <tr>
+                    <th>ID </th>
+                    <th>FullName</th>
+                    <th>UserName</th>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <th>1 </th>
+                    <th>Doloremque Laudantium</th>
+                    <th>doloremque</th>
+                    <th>doloremque@example.com</th>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <th>Nemo enim</th>
+                    <th>nemo</th>
+                    <th>nemo@example.com</th>
+                </tr>
+                <tr>
+                    <th>3 </th>
+                    <th>Adipisci Velit</th>
+                    <th>adipisci</th>
+                    <th>adipisci velit@example.coms</th>
+                </tr>
+            </table>
+        </div>
+        <div id="sidebar">
+            <h3> Sidebar </h3>
+            <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+                <li>Feature 4</li>
+                <li>Feature 5</li>
+                <li>Feature 6</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer onclick="hideLoginForm()">
+        <ol>
+            <li>Extra info 1</li>
+            <li>Extra info 1</li>
+        </ol>
+        <h3> The footer</h3>
+        <div id="scroll">
+            <a href="javascript:void(0);" onclick="scrollToTop()"> <i class="material-icons">arrow_drop_up</i></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
