@@ -10,8 +10,7 @@
 </head>
 
 <body>
-
-    <header onclick="hideLoginForm()">
+    <header>
         <div id="logo">The logo</div>
         <div id="slogan" class="slogan">The header slogan</div>
         <div id="search">
@@ -20,21 +19,22 @@
                 <i class="material-icons">search</i>
             </form>
         </div>
+        <ul class="login-bar">
+            <li class="user"><a href="./user_list.html"><span>Hi</span> User</a></li>
+            <li class="login">login</li>
+        </ul>
+        <div id="login-form">
+            <form>
+                <input class="user-name" placeholder="User Name">
+                <input type="password" class="password" placeholder="Password">
+                <input type="checkbox" class="checkbox">
+                <label>Remember user name</label>
+                <input type="submit" value="Log in" class="login-btn">
+            </form>
+        </div>
     </header>
-    <ul class="login-bar">
-        <li class="user"><a href="./user_list.html"><span>Hi</span> User</a></li>
-        <li class="login" onclick="showLoginForm()">login</li>
-    </ul>
-    <div id="login-form">
-        <form>
-            <input class="user-name" placeholder="User Name">
-            <input type="password" class="password" placeholder="Password">
-            <input type="checkbox" class="checkbox">
-            <label>Remember user name</label>
-            <input type="submit" value="Log in" class="login-btn">
-        </form>
-    </div>
-    <nav onclick="hideLoginForm()">
+
+    <nav>
         <ul>
             <li>Menu 1</li>
             <li>Menu 2</li>
@@ -42,8 +42,7 @@
             <li>Menu 4</li>
         </ul>
     </nav>
-
-    <div id="main" onclick="hideLoginForm()">
+    <div id="main">
         <div id="main-content">
             <h3> The main content go here</h3>
         </div>
@@ -59,8 +58,7 @@
             </ul>
         </div>
     </div>
-
-    <footer onclick="hideLoginForm()">
+    <footer>
         <ol>
             <li>Extra info 1</li>
             <li>Extra info 1</li>

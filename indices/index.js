@@ -26,19 +26,10 @@ window.addEventListener('scroll', function() {
 window.addEventListener('load', () => {
     toggleScrollButton();
 });
-
-function showLoginForm() {
-    let state = document.getElementById("login-form");
-    let cssStyleDeclaration = getComputedStyle(state, null);
-    if (cssStyleDeclaration.getPropertyValue("display") === "none") {
-        state.style.display = "inline-block";
+document.addEventListener('click', (e) => {
+    if (e.target.className === 'login') {
+        document.getElementById('login-form').style.display = "inline-block";
+    } else {
+        document.getElementById('login-form').style.display = "none";
     }
-}
-
-function hideLoginForm() {
-    let state = document.getElementById("login-form");
-    let cssStyleDeclaration = getComputedStyle(state, null);
-    if (cssStyleDeclaration.getPropertyValue("display") !== "none") {
-        state.style.display = "none";
-    }
-}
+});
