@@ -131,7 +131,7 @@ footer {
 .login-bar {
     list-style: none;
     display: inline-block;
-    position: fixed;
+    position: absolute;
     top: 20px;
     right: 70px;
 }
