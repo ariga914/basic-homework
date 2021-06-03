@@ -26,8 +26,13 @@ window.addEventListener('scroll', function() {
 window.addEventListener('load', () => {
     toggleScrollButton();
 });
+
+
+
 document.addEventListener('click', (e) => {
     if (e.target.className === 'login') {
+        document.getElementById('login-form').style.display = "inline-block";
+    } else if (e.target.id === "login-form" || e.target.parentNode.id === "exhausting" || e.target.parentNode.id === "login-form") {
         document.getElementById('login-form').style.display = "inline-block";
     } else {
         document.getElementById('login-form').style.display = "none";
